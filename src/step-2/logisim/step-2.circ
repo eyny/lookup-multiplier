@@ -1,0 +1,273 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<project source="2.7.1" version="1.0">
+This file is intended to be loaded by Logisim (http://www.cburch.com/logisim/).
+<lib desc="#Wiring" name="0"/>
+  <lib desc="#Gates" name="1"/>
+  <lib desc="#Plexers" name="2"/>
+  <lib desc="#Arithmetic" name="3"/>
+  <lib desc="#Memory" name="4">
+    <tool name="ROM">
+      <a name="contents">addr/data: 8 8
+0
+</a>
+    </tool>
+  </lib>
+  <lib desc="#I/O" name="5"/>
+  <lib desc="#Base" name="6">
+    <tool name="Text Tool">
+      <a name="text" val=""/>
+      <a name="font" val="SansSerif plain 12"/>
+      <a name="halign" val="center"/>
+      <a name="valign" val="base"/>
+    </tool>
+  </lib>
+  <main name="main"/>
+  <options>
+    <a name="gateUndefined" val="ignore"/>
+    <a name="simlimit" val="1000"/>
+    <a name="simrand" val="0"/>
+  </options>
+  <mappings>
+    <tool lib="6" map="Button2" name="Menu Tool"/>
+    <tool lib="6" map="Button3" name="Menu Tool"/>
+    <tool lib="6" map="Ctrl Button1" name="Menu Tool"/>
+  </mappings>
+  <toolbar>
+    <tool lib="6" name="Poke Tool"/>
+    <tool lib="6" name="Edit Tool"/>
+    <tool lib="6" name="Text Tool">
+      <a name="text" val=""/>
+      <a name="font" val="SansSerif plain 12"/>
+      <a name="halign" val="center"/>
+      <a name="valign" val="base"/>
+    </tool>
+    <sep/>
+    <tool lib="0" name="Pin">
+      <a name="tristate" val="false"/>
+    </tool>
+    <tool lib="0" name="Pin">
+      <a name="facing" val="west"/>
+      <a name="output" val="true"/>
+      <a name="labelloc" val="east"/>
+    </tool>
+    <tool lib="1" name="NOT Gate"/>
+    <tool lib="1" name="AND Gate"/>
+    <tool lib="1" name="OR Gate"/>
+  </toolbar>
+  <circuit name="main">
+    <a name="circuit" val="main"/>
+    <a name="clabel" val=""/>
+    <a name="clabelup" val="east"/>
+    <a name="clabelfont" val="SansSerif plain 12"/>
+    <wire from="(430,650)" to="(480,650)"/>
+    <wire from="(430,530)" to="(480,530)"/>
+    <wire from="(400,670)" to="(450,670)"/>
+    <wire from="(500,680)" to="(500,700)"/>
+    <wire from="(500,560)" to="(500,580)"/>
+    <wire from="(400,530)" to="(430,530)"/>
+    <wire from="(450,550)" to="(480,550)"/>
+    <wire from="(450,670)" to="(480,670)"/>
+    <wire from="(760,540)" to="(790,540)"/>
+    <wire from="(760,660)" to="(790,660)"/>
+    <wire from="(520,540)" to="(550,540)"/>
+    <wire from="(520,660)" to="(550,660)"/>
+    <wire from="(590,660)" to="(620,660)"/>
+    <wire from="(590,540)" to="(620,540)"/>
+    <wire from="(790,610)" to="(820,610)"/>
+    <wire from="(790,590)" to="(820,590)"/>
+    <wire from="(860,600)" to="(890,600)"/>
+    <wire from="(500,580)" to="(570,580)"/>
+    <wire from="(500,700)" to="(570,700)"/>
+    <wire from="(790,540)" to="(790,590)"/>
+    <wire from="(790,610)" to="(790,660)"/>
+    <wire from="(430,530)" to="(430,650)"/>
+    <wire from="(450,550)" to="(450,670)"/>
+    <comp lib="0" loc="(590,660)" name="Splitter">
+      <a name="facing" val="west"/>
+      <a name="fanout" val="9"/>
+      <a name="incoming" val="9"/>
+      <a name="appear" val="center"/>
+    </comp>
+    <comp lib="0" loc="(550,540)" name="Splitter">
+      <a name="fanout" val="8"/>
+      <a name="incoming" val="8"/>
+      <a name="appear" val="center"/>
+    </comp>
+    <comp lib="4" loc="(760,540)" name="ROM">
+      <a name="addrWidth" val="9"/>
+      <a name="dataWidth" val="16"/>
+      <a name="contents">addr/data: 9 16
+0 0 1 2 4 6 9 c
+10 14 19 1e 24 2a 31 38
+40 48 51 5a 64 6e 79 84
+90 9c a9 b6 c4 d2 e1 f0
+100 110 121 132 144 156 169 17c
+190 1a4 1b9 1ce 1e4 1fa 211 228
+240 258 271 28a 2a4 2be 2d9 2f4
+310 32c 349 366 384 3a2 3c1 3e0
+400 420 441 462 484 4a6 4c9 4ec
+510 534 559 57e 5a4 5ca 5f1 618
+640 668 691 6ba 6e4 70e 739 764
+790 7bc 7e9 816 844 872 8a1 8d0
+900 930 961 992 9c4 9f6 a29 a5c
+a90 ac4 af9 b2e b64 b9a bd1 c08
+c40 c78 cb1 cea d24 d5e d99 dd4
+e10 e4c e89 ec6 f04 f42 f81 fc0
+1000 1040 1081 10c2 1104 1146 1189 11cc
+1210 1254 1299 12de 1324 136a 13b1 13f8
+1440 1488 14d1 151a 1564 15ae 15f9 1644
+1690 16dc 1729 1776 17c4 1812 1861 18b0
+1900 1950 19a1 19f2 1a44 1a96 1ae9 1b3c
+1b90 1be4 1c39 1c8e 1ce4 1d3a 1d91 1de8
+1e40 1e98 1ef1 1f4a 1fa4 1ffe 2059 20b4
+2110 216c 21c9 2226 2284 22e2 2341 23a0
+2400 2460 24c1 2522 2584 25e6 2649 26ac
+2710 2774 27d9 283e 28a4 290a 2971 29d8
+2a40 2aa8 2b11 2b7a 2be4 2c4e 2cb9 2d24
+2d90 2dfc 2e69 2ed6 2f44 2fb2 3021 3090
+3100 3170 31e1 3252 32c4 3336 33a9 341c
+3490 3504 3579 35ee 3664 36da 3751 37c8
+3840 38b8 3931 39aa 3a24 3a9e 3b19 3b94
+3c10 3c8c 3d09 3d86 3e04 3e82 3f01 3f80
+4000 4080 4101 4182 4204 4286 4309 438c
+4410 4494 4519 459e 4624 46aa 4731 47b8
+4840 48c8 4951 49da 4a64 4aee 4b79 4c04
+4c90 4d1c 4da9 4e36 4ec4 4f52 4fe1 5070
+5100 5190 5221 52b2 5344 53d6 5469 54fc
+5590 5624 56b9 574e 57e4 587a 5911 59a8
+5a40 5ad8 5b71 5c0a 5ca4 5d3e 5dd9 5e74
+5f10 5fac 6049 60e6 6184 6222 62c1 6360
+6400 64a0 6541 65e2 6684 6726 67c9 686c
+6910 69b4 6a59 6afe 6ba4 6c4a 6cf1 6d98
+6e40 6ee8 6f91 703a 70e4 718e 7239 72e4
+7390 743c 74e9 7596 7644 76f2 77a1 7850
+7900 79b0 7a61 7b12 7bc4 7c76 7d29 7ddc
+7e90 7f44 7ff9 80ae 8164 821a 82d1 8388
+8440 84f8 85b1 866a 8724 87de 8899 8954
+8a10 8acc 8b89 8c46 8d04 8dc2 8e81 8f40
+9000 90c0 9181 9242 9304 93c6 9489 954c
+9610 96d4 9799 985e 9924 99ea 9ab1 9b78
+9c40 9d08 9dd1 9e9a 9f64 a02e a0f9 a1c4
+a290 a35c a429 a4f6 a5c4 a692 a761 a830
+a900 a9d0 aaa1 ab72 ac44 ad16 ade9 aebc
+af90 b064 b139 b20e b2e4 b3ba b491 b568
+b640 b718 b7f1 b8ca b9a4 ba7e bb59 bc34
+bd10 bdec bec9 bfa6 c084 c162 c241 c320
+c400 c4e0 c5c1 c6a2 c784 c866 c949 ca2c
+cb10 cbf4 ccd9 cdbe cea4 cf8a d071 d158
+d240 d328 d411 d4fa d5e4 d6ce d7b9 d8a4
+d990 da7c db69 dc56 dd44 de32 df21 e010
+e100 e1f0 e2e1 e3d2 e4c4 e5b6 e6a9 e79c
+e890 e984 ea79 eb6e ec64 ed5a ee51 ef48
+f040 f138 f231 f32a f424 f51e f619 f714
+f810 f90c fa09 fb06 fc04 fd02 fe01 ff00
+</a>
+    </comp>
+    <comp lib="3" loc="(520,540)" name="Adder"/>
+    <comp lib="3" loc="(860,600)" name="Subtractor">
+      <a name="width" val="16"/>
+    </comp>
+    <comp lib="0" loc="(400,530)" name="Pin">
+      <a name="width" val="8"/>
+      <a name="tristate" val="false"/>
+      <a name="label" val="A"/>
+      <a name="labelloc" val="north"/>
+    </comp>
+    <comp lib="0" loc="(550,660)" name="Splitter">
+      <a name="fanout" val="8"/>
+      <a name="incoming" val="8"/>
+      <a name="appear" val="center"/>
+    </comp>
+    <comp lib="0" loc="(590,540)" name="Splitter">
+      <a name="facing" val="west"/>
+      <a name="fanout" val="9"/>
+      <a name="incoming" val="9"/>
+      <a name="appear" val="center"/>
+    </comp>
+    <comp lib="0" loc="(400,670)" name="Pin">
+      <a name="width" val="8"/>
+      <a name="tristate" val="false"/>
+      <a name="label" val="B"/>
+      <a name="labelloc" val="north"/>
+    </comp>
+    <comp lib="0" loc="(890,600)" name="Pin">
+      <a name="facing" val="west"/>
+      <a name="output" val="true"/>
+      <a name="width" val="16"/>
+      <a name="tristate" val="false"/>
+      <a name="label" val="Result"/>
+      <a name="labelloc" val="north"/>
+    </comp>
+    <comp lib="3" loc="(520,660)" name="Subtractor"/>
+    <comp lib="4" loc="(760,660)" name="ROM">
+      <a name="addrWidth" val="9"/>
+      <a name="dataWidth" val="16"/>
+      <a name="contents">addr/data: 9 16
+0 0 1 2 4 6 9 c
+10 14 19 1e 24 2a 31 38
+40 48 51 5a 64 6e 79 84
+90 9c a9 b6 c4 d2 e1 f0
+100 110 121 132 144 156 169 17c
+190 1a4 1b9 1ce 1e4 1fa 211 228
+240 258 271 28a 2a4 2be 2d9 2f4
+310 32c 349 366 384 3a2 3c1 3e0
+400 420 441 462 484 4a6 4c9 4ec
+510 534 559 57e 5a4 5ca 5f1 618
+640 668 691 6ba 6e4 70e 739 764
+790 7bc 7e9 816 844 872 8a1 8d0
+900 930 961 992 9c4 9f6 a29 a5c
+a90 ac4 af9 b2e b64 b9a bd1 c08
+c40 c78 cb1 cea d24 d5e d99 dd4
+e10 e4c e89 ec6 f04 f42 f81 fc0
+1000 1040 1081 10c2 1104 1146 1189 11cc
+1210 1254 1299 12de 1324 136a 13b1 13f8
+1440 1488 14d1 151a 1564 15ae 15f9 1644
+1690 16dc 1729 1776 17c4 1812 1861 18b0
+1900 1950 19a1 19f2 1a44 1a96 1ae9 1b3c
+1b90 1be4 1c39 1c8e 1ce4 1d3a 1d91 1de8
+1e40 1e98 1ef1 1f4a 1fa4 1ffe 2059 20b4
+2110 216c 21c9 2226 2284 22e2 2341 23a0
+2400 2460 24c1 2522 2584 25e6 2649 26ac
+2710 2774 27d9 283e 28a4 290a 2971 29d8
+2a40 2aa8 2b11 2b7a 2be4 2c4e 2cb9 2d24
+2d90 2dfc 2e69 2ed6 2f44 2fb2 3021 3090
+3100 3170 31e1 3252 32c4 3336 33a9 341c
+3490 3504 3579 35ee 3664 36da 3751 37c8
+3840 38b8 3931 39aa 3a24 3a9e 3b19 3b94
+3c10 3c8c 3d09 3d86 3e04 3e82 3f01 3f80
+4000 3f80 3f01 3e82 3e04 3d86 3d09 3c8c
+3c10 3b94 3b19 3a9e 3a24 39aa 3931 38b8
+3840 37c8 3751 36da 3664 35ee 3579 3504
+3490 341c 33a9 3336 32c4 3252 31e1 3170
+3100 3090 3021 2fb2 2f44 2ed6 2e69 2dfc
+2d90 2d24 2cb9 2c4e 2be4 2b7a 2b11 2aa8
+2a40 29d8 2971 290a 28a4 283e 27d9 2774
+2710 26ac 2649 25e6 2584 2522 24c1 2460
+2400 23a0 2341 22e2 2284 2226 21c9 216c
+2110 20b4 2059 1ffe 1fa4 1f4a 1ef1 1e98
+1e40 1de8 1d91 1d3a 1ce4 1c8e 1c39 1be4
+1b90 1b3c 1ae9 1a96 1a44 19f2 19a1 1950
+1900 18b0 1861 1812 17c4 1776 1729 16dc
+1690 1644 15f9 15ae 1564 151a 14d1 1488
+1440 13f8 13b1 136a 1324 12de 1299 1254
+1210 11cc 1189 1146 1104 10c2 1081 1040
+1000 fc0 f81 f42 f04 ec6 e89 e4c
+e10 dd4 d99 d5e d24 cea cb1 c78
+c40 c08 bd1 b9a b64 b2e af9 ac4
+a90 a5c a29 9f6 9c4 992 961 930
+900 8d0 8a1 872 844 816 7e9 7bc
+790 764 739 70e 6e4 6ba 691 668
+640 618 5f1 5ca 5a4 57e 559 534
+510 4ec 4c9 4a6 484 462 441 420
+400 3e0 3c1 3a2 384 366 349 32c
+310 2f4 2d9 2be 2a4 28a 271 258
+240 228 211 1fa 1e4 1ce 1b9 1a4
+190 17c 169 156 144 132 121 110
+100 f0 e1 d2 c4 b6 a9 9c
+90 84 79 6e 64 5a 51 48
+40 38 31 2a 24 1e 19 14
+10 c 9 6 4 2 1
+</a>
+    </comp>
+  </circuit>
+</project>
