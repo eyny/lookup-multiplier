@@ -1,2 +1,4 @@
-# look-up-multiplier
-The design of a basic 8-by-8 bit multiplier which utilizes look up tables
+# 8 bit multiplier using lookup tables
+This project demonstrates designing of a basic 8-by-8 bit lookup multiplier step by step. The models are developed in both [Logisim](http://www.cburch.com/logisim/) and Verilog.
+
+The detailed guide will be included in repository later.
